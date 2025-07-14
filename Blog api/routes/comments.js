@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { createComment, getCommentsByPost } = require('../controllers/commentController');
+const { createComment, getCommentsByPost, getAllComments } = require('../controllers/commentController');
 const auth = require('../middleware/authMiddleware');
 
-// ต้องล็อกอินถึงคอมเมนต์ได้
+// ต้อง Login ถึงคอมเมนต์ได้
 router.post('/posts/:id/comments', auth, createComment);
 
 // ทุกคนอ่านคอมเมนต์ได้
