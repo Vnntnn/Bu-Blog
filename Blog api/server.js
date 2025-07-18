@@ -14,7 +14,7 @@ const postRoutes = require('./routes/posts');
 app.use('/api/posts', postRoutes);
 
 const commentRoutes = require('./routes/comments');
-app.use('/api', commentRoutes);  // เส้นทางเป็น /api/posts/:id/comments
+app.use('/api', commentRoutes);
 
 
 const PORT = process.env.PORT || 5000;
